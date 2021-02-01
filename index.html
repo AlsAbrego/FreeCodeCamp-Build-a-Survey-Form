@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <title>A Survey Form</title>
+  <!-- Test running to see with the project is ok or not! -->
+</head>
+
+<body>
+  <header class="container-fluid mb-5">
+    <div class="container">
+      <h1 id="title">This is a simple title for the form</h1>
+    </div>
+    <div class="container-fluid nav-color">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <h2>Your logo here</h2>
+          </a>
+          <button class="navbar-toggler" type="button" name="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" ria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li "nav-item">
+                <a href="#" class="nav-link" aria-current="page">Home form page</a>
+              </li>
+              <li "nav-item">
+                <a href="#" class="nav-link">Another page</a>
+              </li>
+              <li "nav-item">
+                <a href="#" class="nav-link">Other page</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <section class="container">
+      <p id="description">This is a simple web project to build a survey in form format...</p>
+    </section>
+    <section class="container">
+      <form class="form-class" action="index.html" method="post" id="survey-form">
+        <div class="mb-4 personnal-class">
+          <p>Personal information</p>
+          <div class="mb-3">
+            <label for="name" class="form-label" id="name-label">Nome</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your name here" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" id="email-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="your-email@domain.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="number" class="form-label" id="number-label">Age</label>
+            <input type="number" name="age" class="form-control" id="number" required min="0" max="99" placeholder="your age, should be a number">
+          </div>
+        </div>
+        <div class="mb-4 class-dropdown">
+          <p>Which option best describes your current role?</p>
+          <div class="mb-3">
+            <select class="form-control" name="role" id="dropdown">
+              <option disabled selected value>Select current role</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-4 class-radios">
+          <p>What do you like?</p>
+          <div class="mb-3">
+            <label for="go-out" class="form-label">Go out to party?
+              <input id="go-out" type="radio" name="doYouLike" value="Go out to party">
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="stay-home" class="form-label">Stay at home?
+              <input id="stay-home" type="radio" name="doYouLike" value="Stay at home">
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="go-cinema" class="form-label">Go to cinema?
+              <input id="go-cinema" type="radio" name="doYouLike" value="Go to cinema">
+            </label>
+          </div>
+        </div>
+        <div class="mb-4 class-checkboxes">
+          <p>Choise wise!</p>
+          <div class="container position-relative cx">
+            <div class="mb-3 position-absolute top-0 start-0">
+              <label for="option1" class="form-label">
+                <input type="checkbox" name="checkbox-filed" value="option1" id="option1"> First Option
+              </label>
+            </div>
+            <div class="mb-3 position-absolute top-50 start-0">
+              <label for="option2" class="form-label">
+                <input type="checkbox" name="checkbox-filed" value="option2" id="option2"> Second Option
+              </label>
+            </div>
+            <div class="mb-3 position-absolute top-0 start-50">
+              <label for="option3" class="form-label">
+                <input type="checkbox" name="checkbox-filed" value="option3" id="option3"> Third Option
+              </label>
+            </div>
+            <div class="mb-3 position-absolute top-50 start-50">
+              <label for="option4" class="form-label">
+                <input type="checkbox" name="checkbox-filed" value="option4" id="option4"> Fourth Option
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 class-textarea">
+          <label for="message">Please leave any commets or questions here, below...</label>
+          <textarea class="form-control" name="message" id="message" placeholder="Your message here..." rows="3"></textarea>
+        </div>
+        <div class="mb-4 d-grid">
+          <button type="submit" class="btn btn-primary btn-lg" id="submit">
+            Sending
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
