@@ -1,0 +1,61 @@
+:root {
+  --primary-color: #dbf6e9;
+  --second-color: hsl(169, 51%, 75%);
+  --third-color: hsl(169, 51%, 50%);
+}
+
+body {
+  font: 100% "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+header {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--second-color);
+}
+header .nav-color {
+  padding: 0;
+  margin: 0;
+}
+header .nav-color nav {
+  background-color: var(--third-color);
+  margin: 0;
+  padding: 0;
+}
+header .nav-color nav a {
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+.personnal-class, .class-dropdown, .class-radios,
+.class-checkboxes, .class-textarea {
+  padding: 10px;
+  border: 0.1rem solid var(--third-color);
+  border-radius: 10px;
+}
+
+.cx {
+  margin: auto;
+  height: 100px;
+}
+
+/*# sourceMappingURL=styles.css.map */
